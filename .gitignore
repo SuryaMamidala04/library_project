@@ -27,7 +27,7 @@ dist-ssr
 # Security
 .env*
 !.env.example
-
+node_modules/backend/.env
 # Build folders
 build/
 bin/
