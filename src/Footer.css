@@ -1,0 +1,252 @@
+/* ========================================= */
+/* Main Footer Structure */
+/* ========================================= */
+.main-footer {
+  background-color: #f1f3f4; /* Light gray from image */
+  color: #333;
+  width: 100%;
+  font-family: Arial, sans-serif; /* Example font, adjust as needed */
+  border-top: 1px solid #e0e0e0; /* Subtle top border */
+  position: relative; /* Base for positioning the scroll-to-top button */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px; /* Optional max width, adjust to your content area */
+  margin: 0 auto;
+  padding: 40px 20px; /* Top/Bottom and Side padding */
+}
+
+/* Base style for the three main columns */
+.footer-section {
+  flex: 1; /* Each section takes up equal width */
+  padding: 0 15px; /* Side padding inside columns */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section headers ('Contact' and 'Our Social Media') */
+.section-header {
+  color: #2e7d32; /* Primary green from logo */
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* ========================================= */
+/* Left Section: Logo & Text */
+/* ========================================= */
+.logo-section {
+  align-items: flex-start; /* Left-align the logo items */
+}
+
+/* Placeholder for your actual logo image */
+.placeholder-logo-container {
+  width: 150px;
+  height: 50px;
+  background-color: transparent;
+  border: 4px solid #fbc02d; /* Outer yellow border from reference */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  border-radius: 4px; /* Optional slight rounding */
+}
+
+.placeholder-logo-icon {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #2e7d32; /* Inner green color */
+  line-height: 1;
+}
+
+.library-title {
+  color: #f5b002; /* Specific yellow color from image */
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.library-hub-text {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: -10px; /* Pull it slightly closer to the title */
+  margin-left: 5px;
+}
+
+/* ========================================= */
+/* Middle Section: Contact Details */
+/* ========================================= */
+.contact-section {
+  align-items: center; /* Center-align contact items * (adjusted for a cleaner look) */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  width: auto; /* Allow items to define width */
+}
+
+/* Phone and email icons */
+.contact-icon {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.phone-icon {
+  color: #2e7d32; /* Green from logo */
+}
+
+.email-icon {
+  color: #fbc02d; /* Yellow from logo */
+}
+
+.contact-text {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.email-link {
+  color: #2e7d32; /* Make email stand out slightly, from reference text */
+  text-decoration: none; /* No underline */
+}
+
+/* ========================================= */
+/* Right Section: Our Social Media */
+/* ========================================= */
+.social-section {
+  align-items: center; /* Center-align section */
+}
+
+.social-icons-wrapper {
+  display: flex;
+  gap: 15px; /* Space between icons */
+}
+
+/* Social icon container (round button style) */
+.social-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: #fff; /* White background for icons, matching reference style */
+  border-radius: 50%; /* Circle */
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #333; /* Default icon color */
+  border: 1px solid #e0e0e0; /* Optional border */
+  transition: all 0.3s ease; /* Smooth hover transition */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Hover effects (optional, but good for UX) */
+.social-icon-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+/* Specific colors for specific platforms */
+.linkedin:hover { color: #0077b5; border-color: #0077b5; }
+.youtube:hover { color: #ff0000; border-color: #ff0000; }
+.facebook:hover { color: #1877f2; border-color: #1877f2; }
+.instagram:hover { color: #e1306c; border-color: #e1306c; }
+
+/* ========================================= */
+/* Copyright Row */
+/* ========================================= */
+.footer-copyright {
+  background-color: rgba(224, 224, 224, 0.4); /* Transparent gray bar, like glass effect */
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+  padding: 12px 20px;
+}
+
+.footer-copyright p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* ========================================= */
+/* Scroll to Top Button (Bottom-Right) */
+/* ========================================= */
+.scroll-to-top {
+  position: fixed; /* Keep it on the screen */
+  bottom: 30px; /* Distance from bottom edge */
+  right: 30px; /* Distance from right edge */
+  z-index: 1000; /* Ensure it stays above other elements */
+  
+  width: 45px;
+  height: 45px;
+  background-color: transparent;
+  border: 2px solid #d32f2f; /* Red border from reference button */
+  border-radius: 50%; /* Perfect circle */
+  cursor: pointer;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Initial state is hidden */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px); /* Start slightly off-position */
+  transition: all 0.4s ease-out; /* Smooth fade-in effect */
+}
+
+/* State when button should be visible (added via React) */
+.scroll-to-top.show-btn {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* Return to final position */
+}
+
+/* Angle icon style */
+.up-arrow-icon {
+  font-size: 1.5rem;
+  color: #d32f2f; /* Matching red color */
+}
+
+/* Hover effect for the scroll button */
+.scroll-to-top:hover {
+  background-color: rgba(211, 47, 47, 0.1); /* Subtle red background on hover */
+  transform: translateY(-3px); /* Subtle lift */
+}
+
+/* ========================================= */
+/* Responsive Design (Tablet/Mobile) */
+/* ========================================= */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
+    padding: 30px 20px;
+  }
+
+  .footer-section {
+    width: 100%;
+    margin-bottom: 25px; /* Add space between sections */
+    align-items: center; /* Center all items for mobile */
+    text-align: center;
+    padding: 0;
+  }
+
+  .logo-section {
+    align-items: center; /* Center-align the logo on mobile */
+  }
+
+  .library-hub-text {
+    margin-bottom: 20px;
+  }
+
+  .section-header {
+    margin-bottom: 15px;
+  }
+}

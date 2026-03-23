@@ -1,0 +1,134 @@
+/* Container providing the soft gray background and centering */
+.auth-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #f1f3f6; /* Soft gray from image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* The "Register Window" title above the white card */
+.window-label {
+  color: #4a5568;
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+/* The white card component */
+.auth-card {
+  background: white;
+  width: 100%;
+  max-width: 500px; /* Width optimized for laptop viewing */
+  padding: 45px 40px;
+  border-radius: 4px; /* Matches the sharp-yet-soft corners in image */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Subtle depth shadow */
+  text-align: center;
+}
+
+/* The "Register" heading inside the card */
+.auth-header {
+  color: #2d3748;
+  margin-top: 0;
+  margin-bottom: 35px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Input group styling for the Name, Email, and Password rows */
+.input-group {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #e2e8f0; /* Light border from image */
+  border-radius: 4px;
+  margin-bottom: 18px;
+  padding: 10px 15px;
+}
+
+/* Blue icons (👤, ✉, 🔒) */
+.input-icon {
+  color: #4a69bd; /* The specific blue shade from your image */
+  margin-right: 15px;
+  font-size: 1.2rem;
+  width: 25px;
+  text-align: center;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+.input-group input::placeholder {
+  color: #a0aec0; /* Lighter gray for placeholders */
+}
+
+/* The primary Blue Register button */
+.auth-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #4a69bd; /* Primary blue button color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.auth-btn:hover {
+  background-color: #3c56a3; /* Darker blue on hover */
+}
+
+/* "Already have an account? Login here" footer */
+.auth-footer {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+.auth-link {
+  color: #4a69bd;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+
+
+.otp-box:focus {
+  border-color: #007bff !important;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Add or Update this in AdminRegister.css */
+.input-group input {
+    font-size: 14px !important;       /* Forces a standard size */
+    letter-spacing: normal !important; /* Fixes that wide spacing */
+    padding: 10px 15px !important;    /* Ensures text doesn't hit the edges */
+    height: 40px;                     /* Sets a standard height */
+    box-sizing: border-box;
+}
+
+/* Fix for Chrome Auto-fill making text look weird */
+.input-group input:-webkit-autofill,
+.input-group input:-webkit-autofill:hover, 
+.input-group input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #333;
+    transition: background-color 5000s ease-in-out 0s;
+    font-size: 14px !important;
+}

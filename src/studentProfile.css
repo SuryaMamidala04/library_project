@@ -1,0 +1,159 @@
+
+:root {
+    --primary: #0984e3;
+    --bg-light: #F4F7FE;
+    --text-main: #2B3674;
+    --text-grey: #707EAE;
+    --glass: rgba(255, 255, 255, 0.8);
+}
+
+.profile-page-wrapper {
+    background-color: var(--bg-light);
+    min-height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+}
+
+
+/* Glass Navbar updated for right-side back button */
+.glass-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(224, 229, 242, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between "Administrator" text and Back Button */
+}
+
+.admin-tag {
+    background: #F4F7FE;
+    color: #2B3674;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+
+.back-circle-btn {
+  background: var(--dark-navy);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+   width: 100px;
+    height: 40px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.back-circle-btn:hover{
+  background-color: #008080;
+}
+
+
+/* Center the main profile card properly */
+.profile-main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    min-height: calc(100vh - 80px);
+}
+
+
+.profile-card {
+    background: white;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.04);
+    text-align: center;
+}
+
+.avatar-circle {
+    width: 70px;
+    height: 70px;
+    background: var(--primary);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+.profile-title { color: var(--text-main); margin-bottom: 25px; }
+
+.info-grid { text-align: left; margin-bottom: 30px; }
+
+.info-row { margin-bottom: 20px; border: 1px solid #aabfef; padding: 10px; border-radius: 10px; }
+.info-row label { font-size: 0.85rem; color: var(--text-grey); font-weight: 500; }
+.info-row p { color: var(--text-main); font-weight: 600; margin: 5px 0 0; }
+
+/* Forms */
+.form-container { text-align: left; }
+.form-subtitle { color: var(--text-grey); font-size: 0.9rem; margin-bottom: 25px; }
+
+.input-group { margin-bottom: 20px; }
+.input-group label { display: block; font-size: 0.85rem; margin-bottom: 8px; font-weight: 600; }
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #E0E5F2;
+    border-radius: 12px;
+    outline: none;
+    transition: 0.3s;
+}
+.input-group input:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(67, 24, 255, 0.1); }
+
+.otp-input-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.read-only-box { background: #F4F7FE; flex: 1; border: none; padding: 12px; border-radius: 12px; color: var(--text-grey); }
+.otp-trigger { background: #05CD99; color: white; border: none; padding: 0 15px; border-radius: 12px; cursor: pointer; white-space: nowrap; }
+
+.otp-trigger:hover{
+  background-color: #008080;
+}
+
+.form-footer { display: flex; gap: 15px; margin-top: 30px; }
+.save-btn { flex: 2; background: var(--primary); color: white; border: none; padding: 14px; border-radius: 12px; font-weight: 600; cursor: pointer; }
+.cancel-btn { flex: 1; background: #E0E5F2; color: var(--text-main); border: none; padding: 14px; border-radius: 12px; cursor: pointer; }
+
+.primary-btn { width: 100%; background: var(--primary); color: white; border: none; padding: 14px; border-radius: 12px; font-weight: 600; cursor: pointer; margin-bottom: 10px; }
+.text-btn { background: none; border: none; color: var(--text-grey); cursor: pointer; font-size: 0.9rem; }
+
+
+.footer-copyright {
+  background-color: rgba(224, 224, 224, 0.4); /* Transparent gray bar, like glass effect */
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+  padding: 12px 20px;
+}
+
+.footer-copyright p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+}
